@@ -60,7 +60,7 @@ jobs:
           tags: |
             type=sha,prefix=${{ matrix.tag }}-
             type=raw,value=${{ matrix.tag }}
-
+            type=semver,pattern={{version}}
       - name: Login to GHCR
         uses: docker/login-action@v2
         with:
